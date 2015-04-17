@@ -1,0 +1,3 @@
+[submodule "Pod/Classes/lib/libxls"]
+	path = Pod/Classes/lib/libxls
+	url = https://github.com/JanX2/libxls.git

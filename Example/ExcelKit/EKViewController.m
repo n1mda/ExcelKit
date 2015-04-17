@@ -7,6 +7,7 @@
 //
 
 #import "EKViewController.h"
+#import <ExcelKit/ExcelKitReader.h>
 
 @interface EKViewController ()
 

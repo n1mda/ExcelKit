@@ -15,6 +15,7 @@ Pod::Spec.new do |s|
                        Uses libxls C library as a git submodule from https://github.com/JanX2/libxls.git
                        DESC
   s.homepage         = "https://github.com/n1mda/ExcelKit"
+  # s.screenshots     = "www.example.com/screenshots_1", "www.example.com/screenshots_2"
   s.license          = 'MIT'
   s.author           = { "Axel Moller" => "axelmoller5@gmail.com" }
   s.source           = { :git => "https://github.com/n1mda/ExcelKit.git", :tag => s.version.to_s }
@@ -22,8 +23,9 @@ Pod::Spec.new do |s|
   s.requires_arc = true
 
   s.source_files = 'Pod/Classes/**/*.{h,m,c}'
-  s.exclude_files = 'Pod/Classes/libxls/**/*.{m4,guess,in,sub,sh,am}', 'Pod/Classes/libxls/test/*', 'Pod/Classes/libxls/src/xls2csv.c'
-  s.header_mappings_dir = 'Pod/Classes/libxls/include'
+  s.exclude_files = 'Pod/Classes/lib/libxls/**/*.{m4,guess,in,sub,sh,am}', 'Pod/Classes/lib/libxls/test/*', 'Pod/Classes/lib/libxls/src/xls2csv.c'
+
+  s.xcconfig = { 'HEADER_SEARCH_PATHS' => "${PODS_ROOT}/Classes/lib/libxls/**" }
 
   s.libraries = 'iconv'
 end
